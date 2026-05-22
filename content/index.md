@@ -1,6 +1,8 @@
 ---
-title: Welcome to Quartz
+title: Welcome to Freaky Guys
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+This is the Freaky Guys notes website.
+
+Michael, if you are reading this, you said we could access online resources!
+

@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Freaky Guys",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "notes.freakyguys.party",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -24,31 +24,31 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        body: "Tinos",
+        code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#FFFCF0", // Flexoki Light: Paper
+          lightgray: "#E6E4D9", // Flexoki Light: UI-1
+          gray: "#B7B5AC", // Flexoki Light: Base-30
+          darkgray: "#434341", // Flexoki Light: Base-70
+          dark: "#100F0F", // Flexoki Light: Black (Text)
+          secondary: "#205A71", // Flexoki Light: Cyan
+          tertiary: "#5E6C5B", // Flexoki Light: Green
+          highlight: "rgba(230, 228, 217, 0.5)", // Semi-transparent UI-1
+          textHighlight: "#D0A21588", // Yellow with opacity
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#100F0F", // Flexoki Dark: Black
+          lightgray: "#282726", // Flexoki Dark: UI-1
+          gray: "#575653", // Flexoki Dark: Base-30
+          darkgray: "#CECDC3", // Flexoki Dark: Base-70
+          dark: "#FFFCF0", // Flexoki Dark: Paper (Text)
+          secondary: "#3A94B8", // Flexoki Dark: Cyan
+          tertiary: "#879A80", // Flexoki Dark: Green
+          highlight: "rgba(40, 39, 38, 0.5)", // Semi-transparent UI-1
+          textHighlight: "#D0A21588", // Yellow with opacity
         },
       },
     },
@@ -61,8 +61,8 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "github-light",
-          dark: "github-dark",
+          light: "rose-pine",
+          dark: "rose-pine-moon",
         },
         keepBackground: false,
       }),
