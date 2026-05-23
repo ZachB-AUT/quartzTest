@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Freaky Guys",
+    pageTitle: "Notes Page",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -23,9 +23,9 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
+        header: "PT Serif",
         body: "Tinos",
-        code: "JetBrains Mono",
+        code: "Atkinson Hyperlegible Mono",
       },
       colors: {
         lightMode: {
@@ -61,8 +61,8 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "rose-pine",
-          dark: "rose-pine-moon",
+          light: "everforest-light",
+          dark: "everforest-dark",
         },
         keepBackground: false,
       }),

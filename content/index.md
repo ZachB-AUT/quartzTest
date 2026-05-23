@@ -1,12 +1,8 @@
 ---
 title: Welcome to Freaky Guys
 ---
+# Context:
+I bought this domain a while ago, it was like $4 per year.
 
-This is the Freaky Guys notes website.
-
-Michael, if you are reading this, you said we could access online resources!
-
-# Sections:
-
-## 
+Michael, you said we could access online resources, so I made my notes into an online resource.
 
