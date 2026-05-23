@@ -1,4 +1,3 @@
-
 In object oriented programming, encapsulation allows data and methods to have their access restricted.
 
 # C# Encapsulation Keywords
@@ -116,5 +115,71 @@ namespace EncapsulationDemo
             }
         }
     }
+}
+```
+
+# Get and Set Methods in C\#
+
+Get and Set methods allow controlled access to private properties.
+This allows us to validate inputs and give outputs in specified formats.
+
+C# has dedicated syntax for get and set methods, as you can see below.
+
+```c#
+public class User
+{
+    // The private backing field
+    private string _username;
+
+    // The public property containing the get/set accessors
+    public string Username
+    {
+        get 
+        { 
+            return _username; 
+        }
+        set 
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentException("Username cannot be empty.");
+            }
+            // 'value' is a built-in keyword representing the incoming data
+            _username = value; 
+        }
+    }
+}
+```
+
+C# also has ways of *automatically* generating get and set methods:
+
+```c#
+public class Product
+{
+    // The compiler automatically handles the get and set logic
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+}
+```
+
+and omitting the `set;` allows the creation of read-only properties:
+
+```c#
+public class Product
+{
+    // The compiler automatically handles the get and set logic
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+}
+```
+
+Along with `init` only setting:
+
+```c#
+public class Product
+{
+    // The compiler automatically handles the get and set logic
+    public string Name { get; set; }
+    public decimal Price { get; set; }
 }
 ```
