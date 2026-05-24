@@ -30,18 +30,36 @@ namespace ClassDemo {
         Processor = processor;
         RamGB = ramGB;
     }
-	}
 }
 ```
-
 
 # Abstract Classes
 Abstract classes provide a template to instantiate a class, but cannot be instantiated directly.
 
 Attempting to instantiate an abstract class will lead to a compiler error.
+Abstract methods can only be created inside abstract classes.
 
+```cs
+// Animal cannot be instantiated directly!
+public abstract class Animal
+{
+    public string Name { get; set; }
 
+    public abstract void MakeSound();
 
+    public void Sleep()
+    {
+        Console.WriteLine($"{Name} is sleeping.");
+    }
+}
 
-
+// But Dog can!
+public class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Woof!");
+    }
+}
+```
 

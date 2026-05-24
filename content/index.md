@@ -1,5 +1,5 @@
 ---
-title: Welcome to Freaky Guys
+title: FG Notes Page
 ---
 
 These are my notes, primarily for Embedded Systems Design.
