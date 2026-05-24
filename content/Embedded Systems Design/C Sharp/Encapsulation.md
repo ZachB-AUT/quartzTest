@@ -13,7 +13,7 @@ In object oriented programming, encapsulation allows data and methods to have th
 
 ## Examples
 
-```c#
+```cs
 using System;
 
 namespace EncapsulationDemo
@@ -125,7 +125,7 @@ This allows us to validate inputs and give outputs in specified formats.
 
 C# has dedicated syntax for get and set methods, as you can see below.
 
-```c#
+```cs
 public class User
 {
     // The private backing field
@@ -153,7 +153,7 @@ public class User
 
 C# also has ways of *automatically* generating get and set methods:
 
-```c#
+```cs
 public class Product
 {
     // The compiler automatically handles the get and set logic
@@ -164,22 +164,37 @@ public class Product
 
 and omitting the `set;` allows the creation of read-only properties:
 
-```c#
+```cs
 public class Product
 {
     // The compiler automatically handles the get and set logic
-    public string Name { get; set; }
-    public decimal Price { get; set; }
+    public string Name { get; }
+    public decimal Price { get; }
 }
 ```
 
 Along with `init` only setting:
 
-```c#
+```cs
 public class Product
 {
-    // The compiler automatically handles the get and set logic
-    public string Name { get; set; }
-    public decimal Price { get; set; }
+    public string Name { get; init; }
+    public decimal Price { get; init; }
 }
+```
+
+With `init`, you are able to *set* the value of the variable only on initialization, for example:
+
+```cs
+public class Product
+{
+    public string Name { get; init; }
+    public decimal Price { get; init; }
+}
+
+// This works
+Product cheese = new() {name = "Cheese", price = 5.00};
+
+// But this does not!
+cheese.Name = "Milk"; // <- This will throw a compiler error
 ```
