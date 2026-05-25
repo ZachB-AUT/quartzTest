@@ -1,10 +1,6 @@
 ---
 title: Types in C#
 ---
-
-
-
-
 In C# all variables have a *type*, which determines what kind of data they store. There are two types of type, *value* and *reference*.
 
 # Value Types
