@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: quartz.jzhao.xyz
+  baseUrl: notes.freakyguys.party
   ignorePatterns:
     - private
     - templates
@@ -16,30 +16,30 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Notos
+      header: Schibsted Grotesk
       body: Tinos
       code: IBM Plex Mono
     colors:
       lightMode:
         light: "#FFFCF0"
-        lightgray: "#E6E4D9"
-        gray: "#B7B5AC"
-        darkgray: "#403E3C"
+        lightgray: "#F2F0E5"
+        gray: "#CECDC3"
+        darkgray: "#6F6E69"
         dark: "#100F0F"
-        secondary: "#205EA6"
-        tertiary: "#D14D41"
-        highlight: "rgba(32, 94, 166, 0.08)"
-        textHighlight: "#AF302933"
+        secondary: "#24837B"
+        tertiary: "#AD8301"
+        highlight: "rgba(230, 228, 217, 0.5)"
+        textHighlight: "#BC521588"
       darkMode:
         light: "#100F0F"
         lightgray: "#282726"
-        gray: "#575653"
+        gray: "#403E3C"
         darkgray: "#CECDC3"
         dark: "#FFFCF0"
-        secondary: "#4385BE"
-        tertiary: "#E37970"
-        highlight: "rgba(67, 133, 190, 0.15)"
-        textHighlight: "#D14D4133"
+        secondary: "#3AA99F"
+        tertiary: "#D0A215"
+        highlight: "rgba(40, 39, 38, 0.5)"
+        textHighlight: "#DA702C88"
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true
@@ -54,14 +54,24 @@ plugins:
     enabled: true
     options:
       theme:
-        light: Rose-Pine
-        dark: Rose-Pine-Moon
+        light: github-light
+        dark: github-dark
       keepBackground: false
     order: 20
   - source: github:quartz-community/obsidian-flavored-markdown
     enabled: true
     options:
+      comments: true
+      highlight: true
+      wikilinks: true
+      callouts: true
+      mermaid: true
+      parseTags: true
+      parseArrows: true
+      parseBlockReferences: true
       enableInHtmlEmbed: false
+      enableYouTubeEmbed: true
+      enableVideoEmbed: true
       enableCheckbox: true
     order: 30
   - source: github:quartz-community/github-flavored-markdown
@@ -90,7 +100,7 @@ plugins:
     enabled: false
     order: 85
   - source: github:quartz-community/hard-line-breaks
-    enabled: false
+    enabled: true
     order: 90
   - source: github:quartz-community/ox-hugo
     enabled: false
@@ -102,6 +112,23 @@ plugins:
     enabled: true
   - source: github:quartz-community/explicit-publish
     enabled: false
+  - source: github:quartz-community/unlisted-pages
+    enabled: true
+    options: {}
+    order: 45
+  - source: github:quartz-community/encrypted-pages
+    enabled: true
+    options:
+      iterations: 600000
+      passwordField: password
+      unlistWhenEncrypted: false
+      outputPath: static/encryptedContentIndex.json
+  - source: github:quartz-community/stacked-pages
+    enabled: false
+    layout:
+      position: afterBody
+      priority: 50
+      display: all
   - source: github:quartz-community/alias-redirects
     enabled: true
   - source: github:quartz-community/content-index
@@ -229,28 +256,20 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
-  - source: github:quartz-community/unlisted-pages
-    enabled: true
-    options: {}
-    order: 45
-  - source: github:quartz-community/encrypted-pages
+  - source:
+      name: quartz-themes
+      repo: github:saberzero1/quartz-themes
+      subdir: plugin
     enabled: true
     options:
-      iterations: 600000
-      passwordField: password
-      unlistWhenEncrypted: false
-      outputPath: static/encryptedContentIndex.json
-    order: 900
-    layout:
-      position: body
-      priority: 100
-      display: all
-  - source: github:quartz-community/stacked-pages
-    enabled: false
-    layout:
-      position: afterBody
-      priority: 50
-      display: all
+      theme: default
+  - source: github:quartz-community/obsidian-plugin-excalidraw
+    enabled: true
+    options:
+      enableInteraction: true
+      darkMode: auto
+      exportPadding: 20
+    order: 50
 layout:
   groups:
     toolbar:
