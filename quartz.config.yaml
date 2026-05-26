@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: FG Notes Page
+  pageTitle: Notes Page
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -26,7 +26,7 @@ configuration:
         gray: "#CECDC3"
         darkgray: "#6F6E69"
         dark: "#100F0F"
-        secondary: "#24837B"
+        secondary: "rgb(22, 79, 74)"
         tertiary: "#AD8301"
         highlight: "rgba(230, 228, 217, 0.5)"
         textHighlight: "#BC521588"
@@ -54,8 +54,8 @@ plugins:
     enabled: true
     options:
       theme:
-        light: github-light
-        dark: github-dark
+        light: rose-pine
+        dark: rose-pine-moon
       keepBackground: false
     order: 20
   - source: github:quartz-community/obsidian-flavored-markdown
@@ -220,7 +220,7 @@ plugins:
       position: afterBody
       priority: 10
   - source: github:quartz-community/footer
-    enabled: true
+    enabled: false
     options:
       links:
         GitHub: https://github.com/jackyzha0/quartz
@@ -260,7 +260,7 @@ plugins:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
-    enabled: true
+    enabled: false
     options:
       theme: default
   - source: github:quartz-community/obsidian-plugin-excalidraw

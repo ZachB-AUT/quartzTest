@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: FG Notes Page
+  pageTitle: FG Notes Page DEFAULT FALLBACK
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
