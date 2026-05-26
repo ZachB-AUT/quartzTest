@@ -14,18 +14,14 @@ You declare a namespace using the `namespace` keyword, followed by the namespace
 name and a block of code enclosed in curly braces.
 
 ```csharp
-namespace MyApplication
-{
+namespace MyApplication {
     // Classes, structs, etc., go here
-    class MyClass
-    {
+    class MyClass {
         // ...
     }
 
-    namespace DataAccess
-    {
-        class UserRepository
-        {
+    namespace DataAccess {
+        class UserRepository {
             // ...
         }
     }
@@ -46,12 +42,9 @@ can import a namespace using the `using` directive.
 using System;
 using MyApplication.DataAccess;
 
-namespace MyApplication
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace MyApplication {
+    class Program {
+        static void Main(string[] args) {
             Console.WriteLine("Hello from MyApplication!");
             UserRepository repository = new UserRepository();
             // ...
@@ -79,10 +72,8 @@ name.
 ```csharp
 using DAL = MyApplication.DataAccess;
 
-namespace MyApplication
-{
-    class Program
-    {
+namespace MyApplication {
+    class Program {
         static void Main(string[] args)
         {
             DAL.UserRepository repository = new DAL.UserRepository();
@@ -103,8 +94,7 @@ by applying the namespace to the entire file without needing curly braces.
 // MyFile.cs
 namespace MyApplication.Utilities;
 
-class Helper
-{
+class Helper {
     // This class is automatically part of MyApplication.Utilities
 }
 ```
