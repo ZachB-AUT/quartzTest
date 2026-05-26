@@ -14,7 +14,7 @@ password: lookatme
 > The benefits of encapsulation include:
 > - Improved security.
 > - Improved ease of writing code.
-> - Improved east of debugging.
+> - Improved ease of debugging.
 
 ## Question Two
 
