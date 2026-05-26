@@ -1,6 +1,5 @@
 ---
-title: Welcome to Quartz
+title: FG Notes Page
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+This is the webpage where I store my notes.
