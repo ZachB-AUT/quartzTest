@@ -54,7 +54,7 @@ plugins:
     enabled: true
     options:
       theme:
-        light: rose-pine
+        light: rose-pine-dawn
         dark: rose-pine-moon
       keepBackground: false
     order: 20
