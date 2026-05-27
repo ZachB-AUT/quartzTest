@@ -1,7 +1,7 @@
 ---
 title: Past Paper (2025)
 description: This past paper was shown to me by a student who took this course in 2025. If they are reusing questions that is on them.
-password: lookatme
+password: letmein
 ---
 ## Question One
 
